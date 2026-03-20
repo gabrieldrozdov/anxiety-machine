@@ -1,0 +1,98 @@
+
+@font-face {
+	font-family: "Limkin";
+	src: url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.ttf") format(truetype),
+		url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff") format(woff),
+		url("https://toomuchtype.com/fonts/limkin/variable/TMT-LimkinVF.woff2") format(woff2);
+	font-weight: 100 900;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: var(--primary);
+	color: var(--secondary);
+	margin: 0;
+	font-family: "Limkin";
+	font-variation-settings: "wght" 600, "SRFF" 0;
+	font-weight: 600;
+}
+.container {
+	display: grid;
+	grid-template-rows: minmax(0, 1fr) min-content;
+	height: 100dvh;
+}
+.content {
+	font-size: 12vmin;
+	line-height: 0.99em;
+	overflow-wrap: anywhere;
+	overflow: hidden;
+}
+.content-text {
+	font: inherit;
+}
+.content a {
+	color: inherit;
+	text-decoration: none;
+	background-color: var(--secondary);
+	color: var(--primary);
+}
+.content a:hover {
+	background-color: var(--primary);
+	color: var(--secondary);
+}
+.letter[data-type="0"] {
+	/* background-color: var(--primary); */
+	/* color: var(--secondary); */
+}
+.letter[data-type="1"] {
+	background-color: var(--secondary);
+	color: var(--primary);
+}
+.controls {
+	background-color: var(--secondary);
+	color: var(--primary);
+	display: flex;
+	width: 100%;
+}
+.input-text {
+	width: 100%;
+	font-size: 24px;
+	line-height: 1em;
+	padding: calc(10px + .2em) 5px 10px 10px;
+	border: unset;
+	font-family: inherit;
+	font-variation-settings: inherit;
+	text-align: left;
+	background-color: unset;
+	color: inherit;
+}
+.input-text::placeholder {
+	color: var(--primary);
+}
+.input-text:focus {
+	outline: unset;
+}
+.input-button {
+	font-size: 18px;
+	line-height: 1em;
+	padding: calc(10px + .2em) 10px 10px 10px;
+	margin: 5px;
+	border-radius: 50%;
+	border: unset;
+	font-family: inherit;
+	font-variation-settings: inherit;
+	text-align: center;
+	background-color: var(--primary);
+	color: var(--secondary);
+	cursor: pointer;
+	transition: transform .2s;
+}
+.input-button:hover {
+	transform: scale(1.1);
+}
+.input-button:active {
+	transform: scale(0.95);
+}
